@@ -1,0 +1,24 @@
+import { ReactNode } from 'react';
+
+interface IProps {
+    title: ReactNode;
+    subTitle?: ReactNode;
+    thirdTitle?: ReactNode;
+}
+export const Header = ({ title, subTitle, thirdTitle }: IProps): JSX.Element => {
+    return (
+        <header className="masthead" style={{ backgroundImage: 'url("assets/img/home-bg.jpg")' }}>
+            <div className="container position-relative px-4 px-lg-5">
+                <div className="row gx-4 gx-lg-5 justify-content-center">
+                    <div className="col-md-10 col-lg-8 col-xl-7">
+                        <div className="site-heading">
+                            <h1>{title}</h1>
+                            <span className="subheading">{subTitle}</span>
+                            {thirdTitle}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    );
+};
