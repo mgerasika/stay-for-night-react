@@ -2,6 +2,7 @@ import axios from 'axios';
 import qs from 'qs';
 import { useQuery, UseQueryResult } from 'react-query';
 import { createCollection, ICollection } from '../collection';
+import { CONST } from '../const.contstants';
 import { EPageId } from '../enum';
 import { createPageDto, IPageDto } from '../model/page.dto';
 
@@ -22,7 +23,7 @@ const useGatPages = (): UseQueryResult<ICollection<IPageDto>> => {
     );
 
     return useQuery<ICollection<IPageDto>>(`faq`, () =>
-        axios.get(`https://parus-smart.herokuapp.com/api/pages?${query}`).then((r) => {
+        axios.get(CONST.SERVER_URL + `api/pages?${query}`).then((r) => {
             const data = r.data.data.map((item: any) => createPageDto(item));
             return createCollection<IPageDto>(data);
         }),
@@ -31,7 +32,7 @@ const useGatPages = (): UseQueryResult<ICollection<IPageDto>> => {
 
 const useGetPageById = (id: EPageId | string): UseQueryResult<IPageDto> => {
     return useQuery<IPageDto>(`faq-by-id-${id}`, () =>
-        axios.get(`https://parus-smart.herokuapp.com/api/pages/${id}`).then((r) => {
+        axios.get(CONST.SERVER_URL + `api/pages/${id}`).then((r) => {
             const data = createPageDto(r.data.data);
             return data;
         }),

@@ -2,8 +2,10 @@ import axios from 'axios';
 import qs from 'qs';
 import { useQuery, UseQueryResult } from 'react-query';
 import { createCollection, ICollection } from '../collection';
+import { CONST } from '../const.contstants';
 import { EPageId } from '../enum';
 import { createArticleDto, IArticleDto } from '../model/article.dto';
+
 
 //https://parus-smart.herokuapp.com/api/articles
 
@@ -22,7 +24,7 @@ const useGetArticles = (): UseQueryResult<ICollection<IArticleDto>> => {
     );
 
     return useQuery<ICollection<IArticleDto>>(`articles-list`, () =>
-        axios.get(`https://parus-smart.herokuapp.com/api/articles?${query}`).then((r) => {
+        axios.get(CONST.SERVER_URL + `api/articles?${query}`).then((r) => {
             const data = r.data.data.map((item: any) => createArticleDto(item));
             return createCollection<IArticleDto>(data);
         }),
@@ -31,7 +33,7 @@ const useGetArticles = (): UseQueryResult<ICollection<IArticleDto>> => {
 
 const useGetArticleById = (id: EPageId | string): UseQueryResult<IArticleDto> => {
     return useQuery<IArticleDto>(`article-by-id-${id}`, () =>
-        axios.get(`https://parus-smart.herokuapp.com/api/articles/${id}`).then((r) => {
+        axios.get(CONST.SERVER_URL + `api/articles/${id}`).then((r) => {
             const data = createArticleDto(r.data.data);
             return data;
         }),
