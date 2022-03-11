@@ -1,4 +1,4 @@
-import { formatDate } from '@/api/utils';
+import { formatDate } from '@/shared/utils';
 import ReactMarkdown from 'react-markdown';
 
 interface IProps {

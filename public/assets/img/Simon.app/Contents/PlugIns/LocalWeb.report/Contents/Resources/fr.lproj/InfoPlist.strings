@@ -1,8 +1,0 @@
-﻿/* Localized versions of Info.plist keys */
-
-
-CFBundleName = "Enregistrer localement";
-LocalWebButtonName = "Choisir";
-LocalWebMessage = "Sélectionner l'endroit où enregistrer le dossier des rapports :";
-LocalWebNameFieldLabel = "Enregistrer sous :";
-LocalWebUntitled = "sans titre";

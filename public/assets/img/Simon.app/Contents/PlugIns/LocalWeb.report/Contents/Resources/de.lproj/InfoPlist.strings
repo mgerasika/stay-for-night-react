@@ -1,8 +1,0 @@
-﻿/* Localized versions of Info.plist keys */
-
-
-CFBundleName = "Lokal speichern";
-LocalWebButtonName = "Wählen";
-LocalWebMessage = "Wählen Sie, wo der Berichtsordner gespeichert werden soll:";
-LocalWebNameFieldLabel = "Sichern in:";
-LocalWebUntitled = "Unbenannt";

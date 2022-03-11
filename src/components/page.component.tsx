@@ -1,4 +1,4 @@
-import { formatDate } from '@/api/utils';
+import { formatDate } from '@/shared/utils';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Loading } from './loading.component';

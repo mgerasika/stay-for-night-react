@@ -1,9 +1,9 @@
-import { article } from './hooks/api-article.hook';
-import { faq } from './hooks/api-faq.hook';
-import { page } from './hooks/api-page.hook';
+import { orders } from './hooks/api-orders.hook';
+import { requests } from './hooks/api-request.hook';
+import { volunteers } from './hooks/api-volunteer.hook';
 
 export const apiHooks = {
-    article,
-    faq,
-    page,
+	orders,
+	volunteers,
+	requests,
 };
