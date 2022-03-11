@@ -1012,6 +1012,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-sticky@6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@types/react-sticky/-/react-sticky-6.0.4.tgz#cab221a099227d5eabdfcdf0b8cd2fb479058115"
+  integrity sha512-n5yneeM7PrUu4nqk7oV0c0p9LqHXO2D+17DhQ/Z7UiWhaoSvKJXBkSzAdNRRxZO/njttKd0Ch9hLnaFPqZlAdg==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@17.0.38":
   version "17.0.38"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.38.tgz#f24249fefd89357d5fa71f739a686b8d7c7202bd"
